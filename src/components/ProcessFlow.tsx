@@ -87,12 +87,12 @@ const ProcessFlow = () => {
           ))}
         </div>
         
-        <div className="mt-16 flex justify-center">
-          <div className="bg-gradient-to-br from-brainsmart-light-blue to-brainsmart-light-orange p-8 rounded-xl">
-            <p className="text-center text-muted-foreground">
-              Fluxo visual do processo será adicionado aqui
-            </p>
-          </div>
+        <div className="mt-16 text-center">
+          <img 
+            src="/lovable-uploads/e5574afb-094e-4b1e-ba2f-93045fd7e38c.png" 
+            alt="Fluxo visual completo do processo terapêutico BrainSmart com IA" 
+            className="mx-auto max-w-full h-auto rounded-lg shadow-lg"
+          />
         </div>
       </div>
     </section>

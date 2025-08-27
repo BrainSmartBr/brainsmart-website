@@ -52,6 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				brainsmart: {
+					orange: 'hsl(var(--brainsmart-orange))',
+					blue: 'hsl(var(--brainsmart-blue))',
+					'light-blue': 'hsl(var(--brainsmart-light-blue))',
+					'light-orange': 'hsl(var(--brainsmart-light-orange))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

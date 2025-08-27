@@ -18,8 +18,10 @@ const HeroSection = () => {
             neurofeedback inteligente e planos de ação personalizados aos seus colaboradores e clientes.
           </p>
           
-          <Button variant="brainsmart" size="lg" className="text-lg px-8 py-4 h-auto">
-            Quero ser um canal de bem-estar com IA
+          <Button variant="brainsmart" size="lg" className="text-lg px-8 py-4 h-auto" asChild>
+            <a href="https://u0d0j.share.hsforms.com/20kaaARWsSa-crC5DWzWMZw" target="_blank" rel="noopener noreferrer">
+              Quero ser um canal de bem-estar com IA
+            </a>
           </Button>
         </div>
       </div>

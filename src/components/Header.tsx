@@ -13,8 +13,10 @@ const Header = () => {
           />
         </div>
         
-        <Button variant="brainsmart" size="lg">
-          Quero ser um canal de bem-estar com IA
+        <Button variant="brainsmart" size="lg" asChild>
+          <a href="https://u0d0j.share.hsforms.com/20kaaARWsSa-crC5DWzWMZw" target="_blank" rel="noopener noreferrer">
+            Quero ser um canal de bem-estar com IA
+          </a>
         </Button>
       </div>
     </header>

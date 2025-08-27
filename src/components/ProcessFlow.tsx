@@ -86,6 +86,14 @@ const ProcessFlow = () => {
             </Card>
           ))}
         </div>
+        
+        <div className="mt-16 flex justify-center">
+          <div className="bg-gradient-to-br from-brainsmart-light-blue to-brainsmart-light-orange p-8 rounded-xl">
+            <p className="text-center text-muted-foreground">
+              Fluxo visual do processo será adicionado aqui
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

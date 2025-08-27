@@ -23,8 +23,10 @@ const BetaTester = () => {
               personalizado para seu bem-estar mental.
             </p>
             
-            <Button variant="brainsmart-outline" size="lg" className="text-lg px-8 py-4 h-auto">
-              Quero testar como beta-tester individual
+            <Button variant="brainsmart-outline" size="lg" className="text-lg px-8 py-4 h-auto" asChild>
+              <a href="https://u0d0j.share.hsforms.com/26_saTLsXTWq76qDG07D0qA" target="_blank" rel="noopener noreferrer">
+                Quero testar como beta-tester individual
+              </a>
             </Button>
           </CardContent>
         </Card>

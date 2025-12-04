@@ -1,11 +1,30 @@
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 const HeroSection = () => {
+  useEffect(() => {
+    // Load Calendly widget script
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  const scrollToCalendly = () => {
+    const calendlySection = document.getElementById("calendly-section");
+    if (calendlySection) {
+      calendlySection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="pt-24 pb-16 bg-gradient-to-br from-brainsmart-light-blue via-background to-brainsmart-light-orange">
-      <div className="container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+    <section className="pt-28 pb-16 bg-gradient-to-br from-brainsmart-light-blue via-background to-brainsmart-light-orange min-h-screen">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Transforme o{" "}
             <span className="bg-gradient-to-r from-brainsmart-blue to-brainsmart-orange bg-clip-text text-transparent">
               bem-estar mental
@@ -13,16 +32,37 @@ const HeroSection = () => {
             com inteligência artificial
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            A BrainSmart está em fase de testes e busca empresas e espaços de bem-estar para oferecer 
-            neurofeedback inteligente e planos de ação personalizados aos seus colaboradores e clientes.
+          <p className="text-xl md:text-2xl text-foreground font-medium mb-4">
+            Faça um teste de bem-estar cerebral grátis e receba um plano de monitoramento contínuo.
           </p>
           
-          <Button variant="brainsmart" size="lg" className="text-lg px-8 py-4 h-auto" asChild>
-            <a href="https://u0d0j.share.hsforms.com/20kaaARWsSa-crC5DWzWMZw" target="_blank" rel="noopener noreferrer">
-              Quero ser um canal de bem-estar com IA
-            </a>
+          <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+            Experiência rápida em pontos de bem-estar BrainSmart em cafés e empresas parceiras, 
+            complementando terapia e acompanhamento psicológico sem substituí-los.
+          </p>
+          
+          <Button 
+            variant="brainsmart" 
+            size="lg" 
+            className="text-lg px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            onClick={scrollToCalendly}
+          >
+            Quero testar de graça
           </Button>
+        </div>
+
+        {/* Calendly Section */}
+        <div id="calendly-section" className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-6 text-foreground">
+            Agende sua experiência BrainSmart
+          </h2>
+          <div className="bg-card rounded-2xl shadow-lg border border-border overflow-hidden">
+            <div 
+              className="calendly-inline-widget" 
+              data-url="https://calendly.com/brainsmart/15min" 
+              style={{ minWidth: "320px", height: "700px", width: "100%" }}
+            />
+          </div>
         </div>
       </div>
     </section>

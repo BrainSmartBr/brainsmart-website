@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import ProcessFlow from "@/components/ProcessFlow";
-import Benefits from "@/components/Benefits";
-import BetaTester from "@/components/BetaTester";
-import Testimonials from "@/components/Testimonials";
+import HowItWorks from "@/components/HowItWorks";
+import WhereWeAre from "@/components/WhereWeAre";
+import UserBenefits from "@/components/UserBenefits";
+import B2BSection from "@/components/B2BSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -11,10 +11,10 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <HeroSection />
-      <ProcessFlow />
-      <Benefits />
-      <BetaTester />
-      <Testimonials />
+      <HowItWorks />
+      <WhereWeAre />
+      <UserBenefits />
+      <B2BSection />
       <Footer />
     </div>
   );
